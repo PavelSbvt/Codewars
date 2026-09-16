@@ -1,6 +1,7 @@
 from utils.output_rich import Rich
 
 
+# кю
 Rich.simple_log("Решение задачи")
 
 Rich.debug_log("Условие: получаем массив n*n элементов, который нужно вернуть в виде"
