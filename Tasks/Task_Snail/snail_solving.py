@@ -27,15 +27,19 @@ def output_mas(input_mas: list) -> None:
     elements = len(input_mas)
 
     for elements in input_mas:
+        # верхняя строка
         working_mas += input_mas.pop(0)
 
+        # правый столбец
         if input_mas and input_mas[0]:
             for row in input_mas:
                 working_mas.append(row.pop())
 
+        # нижняя строка
         if input_mas:
             working_mas += input_mas.pop()[::-1]
 
+        # левый столбец
         if input_mas and input_mas[0]:
             for row in reversed(input_mas):
                 working_mas.append(row.pop(0))
