@@ -27,6 +27,7 @@ def check_is_isogram(input_str: str) -> bool:
 
     return len(input_str) == len(set(input_str))
 
+
 if check_is_isogram(input_string):
     Rich.success_log(f"слово '{input_string}' - изограмма")
 else:
