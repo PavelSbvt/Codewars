@@ -1,13 +1,8 @@
 import sys
-from pathlib import Path
-from typing import Optional, List, Dict, Any
 
-from PyQt6.QtCore import QPoint, Qt
-from PyQt6.QtWidgets import (QWidget, QLabel, QTabWidget, QPushButton,
-    QProgressBar, QRadioButton, QButtonGroup, QLineEdit, QApplication,
-    QMessageBox, QMainWindow, QVBoxLayout, QHBoxLayout, QScrollArea, QSlider)
-
-from utils.output_rich import Rich
+from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import (QApplication,
+                             QMainWindow)
 
 
 class MainWindow(QMainWindow):
