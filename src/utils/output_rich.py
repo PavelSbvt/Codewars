@@ -200,3 +200,18 @@ class Rich:
             table.add_row(*[str(cell) for cell in row])
 
         console.print(table)
+
+
+    @staticmethod
+    def input_data(input_label: str):
+        """
+        Функция для красивого оформления ввода данных через терминал с использованием
+         библиотеки Rich
+        :param input_label: Str - Принимает строку с заголовком ввода (пример: 'Автор',
+         чтобы в логе ввода было 'Автор: ')
+        :return: Optional
+        """
+
+        value = console.input(f"[bold orange1][INPUT] {input_label}: [/bold orange1]")
+
+        return value
