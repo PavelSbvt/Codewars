@@ -1,4 +1,3 @@
-# run.ps1
 $ProjectRoot = Split-Path $PSScriptRoot -Parent
 
 $env:PYTHONPATH = "$ProjectRoot\src"
