@@ -23,12 +23,18 @@ def check_is_isogram(input_str: str) -> bool:
 
     input_str = input_str.lower()
 
-    Rich.debug_log(set(input_str))
+    if input_str.isalpha():
+        Rich.debug_log(set(input_str))
 
-    return len(input_str) == len(set(input_str))
+        return len(input_str) == len(set(input_str))
+
+    else:
+        Rich.log_error("В строке есть не только буквы")
+        return False
 
 
 if check_is_isogram(input_string):
     Rich.success_log(f"слово '{input_string}' - изограмма")
 else:
-    Rich.warning_log(f"слово '{input_string}' содержит повторяющиеся символы")
+    Rich.warning_log(f"слово '{input_string}' содержит повторяющиеся символы "
+        f"и не является изограммой")
