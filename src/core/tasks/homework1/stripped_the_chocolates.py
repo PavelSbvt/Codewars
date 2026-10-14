@@ -36,15 +36,8 @@ def stripped_the_chocolate(n: int, m: int) -> int:
         Rich.log_error(f"Введён некорректный размер шоколадки: {n}*{m}")
         return 0
 
-    if (n - 1) >= 1:
-        n_cuts = n - 1
-    else:
-        n_cuts = 1
-
-    if (m - 1) >= 1:
-        m_cuts = m - 1
-    else:
-        m_cuts = 1
+    n_cuts = max((n - 1), 1)
+    m_cuts = max((m - 1), 1)
 
     count_cuts = n_cuts + m_cuts
 
